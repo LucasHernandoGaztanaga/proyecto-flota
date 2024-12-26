@@ -1,0 +1,35 @@
+// Función para evaluar necesidad de mantenimiento
+evaluarMantenimiento(kilometros_recorridos, fecha_ultimo_mantenimiento)
+{
+    // Obtener fecha actual
+    fecha_actual = today;
+    
+    // Calcular meses transcurridos
+    meses_transcurridos = monthsBetween(fecha_ultimo_mantenimiento, fecha_actual);
+    
+    // Variables para control
+    necesita_por_km = kilometros_recorridos > 20000;
+    necesita_por_tiempo = meses_transcurridos > 6;
+    
+    // Determinar mensaje según condiciones
+    if(necesita_por_km && necesita_por_tiempo)
+    {
+        return "ALERTA PRIORITARIA: Requiere mantenimiento inmediato - Excede kilometraje y tiempo";
+    }
+    else if(necesita_por_km)
+    {
+        return "Mantenimiento requerido: Excede kilometraje máximo permitido";
+    }
+    else if(necesita_por_tiempo)
+    {
+        return "Mantenimiento requerido: Excede tiempo máximo permitido";
+    }
+    
+    return "No requiere mantenimiento";
+}
+
+// Ejemplo de uso
+kilometros = 25000;
+ultima_fecha = addMonths(today, -7);  // Ejemplo: 7 meses atrás
+resultado = evaluarMantenimiento(kilometros, ultima_fecha);
+info resultado;
