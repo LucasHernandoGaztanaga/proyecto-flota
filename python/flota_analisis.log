@@ -1,0 +1,3 @@
+2024-12-23 18:46:56,924 - __main__ - INFO - Iniciando análisis de flota...
+2024-12-23 18:46:57,027 - root - INFO - Reporte Excel generado exitosamente en: data/reporte_flota.xlsx
+2024-12-23 18:46:57,027 - __main__ - INFO - Análisis completado. Resultados guardados en data/mantenimiento_requerido.csv

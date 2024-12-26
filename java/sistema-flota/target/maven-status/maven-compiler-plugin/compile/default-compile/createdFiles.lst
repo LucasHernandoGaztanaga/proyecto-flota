@@ -1,0 +1,5 @@
+com/flota/Main.class
+com/flota/model/EstadoVehiculo.class
+com/flota/service/GestorFlota.class
+com/flota/model/Vehiculo.class
+com/flota/service/GestorFlota$ResumenEstado.class
